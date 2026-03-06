@@ -1,0 +1,24 @@
+[Unit]
+Description=k0s - Zero Friction Kubernetes
+Documentation=https://docs.k0sproject.io
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ImportCredential=k0s.token
+EnvironmentFile=/etc/k0s/args.env
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=k0s $K0S_ARGS
+
+RestartSec=10
+Delegate=yes
+KillMode=process
+LimitCORE=infinity
+TasksMax=infinity
+TimeoutStartSec=0
+LimitNOFILE=999999
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

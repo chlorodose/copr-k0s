@@ -1,0 +1,6 @@
+[Unit]
+Description=k0s - Zero Friction Kubernetes
+Documentation=https://docs.k0sproject.io
+
+[Install]
+WantedBy=multi-user.target
