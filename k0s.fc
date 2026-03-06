@@ -1,0 +1,6 @@
+/var/lib/k0s/bin/containerd.*                                           --  gen_context(system_u:object_r:container_runtime_exec_t,s0)
+/var/lib/k0s/bin/runc                                                   --  gen_context(system_u:object_r:container_runtime_exec_t,s0)
+/var/lib/k0s/containerd(/.*)?                                           --  gen_context(system_u:object_r:container_var_lib_t,s0)
+/var/lib/k0s/containerd/io.containerd.snapshotter.*/snapshots(/.*)?     --  gen_context(system_u:object_r:container_ro_file_t,s0)
+/etc/cni/.*                                                             --  gen_context(system_u:object_r:container_file_t,s0)
+/opt/cni/.*                                                             --  gen_context(system_u:object_r:container_file_t,s0)

@@ -17,7 +17,7 @@ Source20:       https://github.com/k0sproject/k0s/releases/download/v%{tag}%2Bk0
 ExclusiveArch:  x86_64 arm64
 
 Requires:       systemd
-Recommends:     container-selinux
+Recommends:     k0s-policy
 
 %prep
 cp %{SOURCE10} %{SOURCE11} .
